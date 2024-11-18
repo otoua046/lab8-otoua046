@@ -1,0 +1,54 @@
+
+type Query {
+    # Author queries
+    authors: [Author]
+    authorById(id: ID!): Author
+
+    # Book queries
+    books: [Book]
+    bookById(id: ID!): Book
+
+    # Employee queries
+    employees: [Employee]
+    employeeById(id: ID!): Employee
+}
+
+type Mutation {
+    # Author mutations
+    addAuthor(name: String!): Author
+
+    # Book mutations
+    addBook(title: String!, authorId: ID!): Book
+
+    # Employee mutations
+    createEmployee(input: CreateEmployeeInput!): Employee
+    deleteEmployee(id: ID!): Boolean
+    updateEmployee(id: ID!, input: CreateEmployeeInput!): Employee
+}
+
+type Author {
+    id: ID!
+    name: String!
+    books: [Book]
+}
+
+type Book {
+    id: ID!
+    title: String!
+    author: Author
+}
+
+type Employee {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    position: String!
+    salary: Float!
+}
+
+input CreateEmployeeInput {
+    firstName: String!
+    lastName: String!
+    position: String!
+    salary: Float!
+}

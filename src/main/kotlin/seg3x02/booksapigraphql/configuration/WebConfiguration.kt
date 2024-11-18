@@ -1,4 +1,4 @@
-package seg3x02.employeeGql.configuration
+package seg3x02.booksapigraphql.configuration
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.config.annotation.CorsRegistry

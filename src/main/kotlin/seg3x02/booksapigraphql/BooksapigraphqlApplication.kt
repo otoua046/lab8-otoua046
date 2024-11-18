@@ -1,11 +1,11 @@
-package seg3x02.employeeGql
+package seg3x02.booksapigraphql
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class EmployeeGqlApplication
+class BooksapigraphqlApplication
 
 fun main(args: Array<String>) {
-	runApplication<EmployeeGqlApplication>(*args)
+	runApplication<BooksapigraphqlApplication>(*args)
 }
